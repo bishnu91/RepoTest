@@ -1,1 +1,1767 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch0="http://xmlns.fedex.com/rdt/Invoiceservices" xmlns:sch1="http://xmlns.fedex.com/rdt/Common" xmlns:sch2="http://xmlns.fedex.com/rdt/Header" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://xmlns.fedex.com/rdt/Invoiceservices" targetNamespace="http://xmlns.fedex.com/rdt/Invoiceservices">
+    <wsdl:types xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:com="http://xmlns.fedex.com/rdt/Common" xmlns:hdr="http://xmlns.fedex.com/rdt/Header" xmlns:inv="http://xmlns.fedex.com/rdt/Invoiceservices" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xmlns.fedex.com/rdt/Invoiceservices">
+            <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Title: New InvoiceInquiry Schema
+			prepared
+			by:Venkat</xsd:documentation>
+                <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Initial Creation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:import namespace="http://xmlns.fedex.com/rdt/Common" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            <xsd:import namespace="http://xmlns.fedex.com/rdt/Header" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            <xsd:element name="InvoiceInquiryRequest" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:extension base="inv:InvoiceInquiryRequestType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:attributeGroup ref="inv:versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="InvoiceInquiryResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:extension base="inv:InvoiceInquiryResponseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:attributeGroup ref="inv:versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MBGStatusInquiryRequest" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:extension base="inv:MBGStatusInquiryRequestType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:attributeGroup ref="inv:versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MBGStatusInquiryResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:extension base="inv:MBGStatusInquiryResponseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:attributeGroup ref="inv:versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="AdjustmentHistoryRequest" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:extension base="inv:AdjustmentHistoryRequestType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:attributeGroup ref="inv:versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="AdjustmentHistoryResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:extension base="inv:AdjustmentHistoryResponseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:attributeGroup ref="inv:versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="RefundInquiryRequest" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:extension base="inv:RefundInquiryRequestType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:attributeGroup ref="inv:versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="RefundInquiryResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:extension base="inv:RefundInquiryResponseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:attributeGroup ref="inv:versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:extension>
+                    </xsd:complexContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:complexType name="RefundInquiryRequestType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="invoiceNumber" type="com:invoiceId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="trackingId" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="request" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="vendorNum" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="RefundInquiryResponseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="refundNumber" type="xsd:decimal" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="Invoice" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="trackingId" type="com:string13" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="tidAmountRefunded" type="xsd:decimal" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="shipdate" type="com:qualifiedDateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="voucherNumber" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="reasonText" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="companyCode" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="requestNumber" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="vendorNumber" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AdjustmentHistoryRequestType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="AccountNumber" type="com:accountId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="AdjHistActionCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="RebillReasonCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AdjustmentHistoryResponseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="actionCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="reasonCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="actionReasonCount" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="actAdjAmountSumStr" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="actAdjAmountSum" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="MBGStatusInquiryRequestType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="RequestType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="TrackingID" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="InvoiceID" type="com:invoiceId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="MBGStatusInquiryResponseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="guaranteeType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="issueCredit" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="overrideable" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="excludedByService" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="rpsGuaranteeExclusion" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element name="description" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element name="code" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element name="isOverrideable" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element name="pending" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element name="accepted" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element name="denied" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element name="noTrackpacRequest" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="guaranteeResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element name="code" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element name="description" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="InvoiceInquiryRequestType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="requestHeader" type="hdr:RequestHeaderType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="empNumber" type="com:numericString10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="accountId" type="com:accountId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invoiceStatus" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:simpleType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:restriction base="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:enumeration value="O" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:enumeration value="C" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:enumeration value="A" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="searchFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="getMore" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="getAll" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="InvoiceId" type="com:invoiceId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="trackingId" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="trackingGet" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="resultOptions" type="com:resultOptionsType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="window" type="com:searchWindow" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invoiceDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="requestIdNumber" type="com:numericString8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="shipDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="surchargeIndicator" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invFromDt" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invToDt" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="InquiryOptions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element minOccurs="0" name="noShipmentList" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="trackingDetailOnly" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="invoiceDetailOnly" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="accountDetailOnly" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="PackageTrackingNumberRequest" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="OnlineRevenueItemIdRequest" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="RevItemIdTypeCdRequest" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="DatabaseNameRequest" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="CallingApplicationRequest" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="InvoiceInquiryResponseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="header" type="hdr:ResponseHeaderType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="accountId" type="com:accountId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="searchFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="billtoaddress" type="com:AddressType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="migrated" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="contextId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Absence of this field indicate there are no more
+						results available for
+						this search</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="comResultSet" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element minOccurs="0" name="duplicateInvoice" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="duplicateTrackingId" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="resultOptions" type="com:resultOptionsType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="accountType" type="inv:accountType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Invoices" type="inv:InvoiceType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="PreliminaryDataResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="BasicResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                            <xsd:element name="RevItemId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element name="RevItemTypeCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element name="DatabaseName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element name="LineOfBusinessCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element name="CompanyCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element name="ShipDate" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element name="CustAccountNumber" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element name="RoleCustName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element name="DeviceName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="ShipmentDataResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element minOccurs="0" name="Shipment" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                            <xsd:element minOccurs="0" name="PackageTrackingNumber" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="OnlineRevenueItemId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="OriginalShipDate" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="CustomerData" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                    <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                        <xsd:element maxOccurs="5" minOccurs="0" name="Customer" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                            <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                                    <xsd:element minOccurs="0" name="CustomerRoleTypeCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="RoleCustomerName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="CustomerAccountNumber" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="CustomerCompanyName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="CustomerAddress1Desc" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="CustomerAddress2Desc" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="CustomerCityName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="CustomerStateName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="CustomerPostalCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                    <xsd:element minOccurs="0" name="CustomerCountryCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                                </xsd:sequence>
+                                                            </xsd:complexType>
+                                                        </xsd:element>
+                                                    </xsd:sequence>
+                                                </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element minOccurs="0" name="TotalPackageQuantity" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="ShipmentRatedWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="OriginalShipmentCustomerWeight" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="ServiceBaseCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="PackagingTypeCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="PaymentPayorCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="PaymentMethodCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element maxOccurs="3" minOccurs="0" name="ReferenceNotesDescription" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="ShipmentMinutesLateQuantity" type="xsd:long" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">ShipmentMinutesLateQuantity =
+												RightDayLateMinutes (pkg_min_late_qty)</xsd:documentation>
+                                                </xsd:annotation>
+                                            </xsd:element>
+                                            <xsd:element maxOccurs="12" minOccurs="0" name="SpecialHandlingCodes" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="OnlineDeclaredValueAmount" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="ReceivedAtCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="RateZoneCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="ConsigneeSignatureName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="FinalDispositionStatusCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="ShipmentDeliveryCommitmentCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="OriginLocationID" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="DestinationLocationID" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="OriginalDeliveryAttemptDate" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="PointOfFailureCauseCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="PointOfFailureClassCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="PointOfFailureCategoryCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element maxOccurs="20" minOccurs="0" name="ProfileTypeCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element maxOccurs="20" minOccurs="0" name="StatusCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="OnlineItemNetChargeAmount" type="xsd:float" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="ShipmentActualWeight" type="xsd:float" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="RatedDimWidthQuantity" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="RatedDimLengthQuantity" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="RatedDimHeightQuantity" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element maxOccurs="25" minOccurs="0" name="ChargeCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="FormTypeID" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="CurrentRevenueStageCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="PricingProgramCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="FinalDispositionDate" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="accountType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="statementType" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="balanceForward" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="Address" type="com:AddressType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="totalInvoiceCount" type="com:numericString7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="customerData" type="inv:customerDataDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="customerDataDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="inv:customerDataType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="shipperAddress" type="inv:addressTypeDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="salesTerritory" type="com:string12" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billingRestrictIndicator" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="creditRating" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="cashOnlyReason" type="com:numericString12" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="exceptionFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="nriFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="statementType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="customerDataType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="customerType" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="messageIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="statusCode" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="imsDatabaseName" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="subroutineErrorMessage" type="com:string79" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="billToNumber" type="com:numericString9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ediNumber" type="com:numericString9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="billingType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="billingMedium" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="intBillingMedium" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="mmaFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="interlineCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="nationalDiscNumber" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="nationalAccountSubGroup" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="auditFirmNumber" type="com:string4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="insightFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="emergeFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="moneyBackGuarantee" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="addressTypeDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="name" type="com:string60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="address1" type="com:string125" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="address2" type="com:string125" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="city" type="com:string60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="state" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="zip" type="com:string13" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="country" type="com:string4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="attention" type="com:string20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="phone" type="com:phone" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="phoneExt" type="com:numericString6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="InvoiceType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="InvoiceId" type="com:invoiceId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="caseExists" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Activity" type="inv:ActivityType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Remarks" type="com:remarksType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="customerLevelCharges" type="inv:CustomerLevelCharges" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="Detail" type="inv:InvoiceDetailType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Summary" type="inv:rdtInvoiceSummaryType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Tracking" type="inv:TrackingType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invoiceSwitch" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invoiceJulianDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="repInvOpenCloseSw" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="arInvoiceFoundIndicator" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="billtoaddress" type="com:AddressType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="ConsolidatedCharges" type="inv:ChargeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="isLateFee" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ActivityType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:BaseActivityType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="paymentReferenceNumber" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="paymentType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="creditCardInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="CustomerLevelCharges" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:BaseChargeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="clcId" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="chargeDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="chargeCount" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invLvlAccessCd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="InvoiceDetailType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:BaseInvoiceDetailType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="billType" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="denialIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="refundIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billToLegalEntity" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billToAddress" type="com:AddressType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="rdtInvoiceSummaryType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:invoiceSummaryType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="disputeFlag" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="companyCode" type="com:numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="disputeCount" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="creditCardInvoice" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="naccIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="creditCard" type="com:creditCardType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="localInvoiceId" type="com:string15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="currencyCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invoiceLegalEntity" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="adjustableAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invoiceNumberSum" type="com:string15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invoiceSeqNbrSum" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="employeeEligibilityFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="approvalLimitsAmount" type="inv:limitsAmountType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="reissueFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="arCurrencyCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="ardisputeAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="funcAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="funcCurrency" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invSubType" type="com:string15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="dropDiscFlag" type="com:string15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="AdjustableAmt" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="limitsAmountType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="adj" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="rebill" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TrackingType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:BaseTrackingType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="Details" type="inv:TrackingDetailType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Activity" type="inv:ActivityType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="Dimensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:extension base="com:dimensionsType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                <xsd:element minOccurs="0" name="dimFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                <xsd:element minOccurs="0" name="nonChargeWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            </xsd:sequence>
+                                        </xsd:extension>
+                                    </xsd:complexContent>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="addresses" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:element minOccurs="0" name="recipient" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                            <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                    <xsd:extension base="com:AddressType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                            <xsd:element minOccurs="0" name="recipCompany" type="com:string60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                        </xsd:sequence>
+                                                    </xsd:extension>
+                                                </xsd:complexContent>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element minOccurs="0" name="shipper" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                            <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                    <xsd:extension base="com:AddressType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                            <xsd:element minOccurs="0" name="abAddressType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                            <xsd:element minOccurs="0" name="shipCompany" type="com:string60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                        </xsd:sequence>
+                                                    </xsd:extension>
+                                                </xsd:complexContent>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="TrackingSummary" type="inv:TrackingSummaryType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Charges" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:extension base="com:trackingIdChargeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                <xsd:element minOccurs="0" name="ntrBillingService" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                <xsd:element minOccurs="0" name="ntrProductQuantity" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            </xsd:sequence>
+                                        </xsd:extension>
+                                    </xsd:complexContent>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="customerLevelCharges" type="inv:CustomerLevelCharges" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="reRateDetails" type="inv:ReRateDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="WeightDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:element minOccurs="0" name="custShipWeight" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="custPackWeight" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="expOrigWeight" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="actualPackWeight" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="custShipWeightUOM" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="custPackWeightUOM" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="expOrigWeightUOM" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="actualPackWeightUOM" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="smpManifestWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element minOccurs="0" name="ratedPackagingWeight" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="remarks" type="com:remarksType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="artrackingFoundIndicator" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="caseExists" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="isLateFee" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="lateFeeAssessedInv" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="lateFeeChargeFormula" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="lateFeeAdjustmentCnt" type="xsd:long" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="ChargeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:BaseChargeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="adjustableAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="disputeAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="caseExists" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="TrackingDetailType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:BaseTrackingDetailType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="ratedAsWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="ratedAsWeightType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="documentControlNumber" type="com:numericString15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="physicalWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abStatus" type="com:numericString2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="MBWappliedFlag" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abOriginStation" type="com:string7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abDestinationStation" type="com:string7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abAlphaOrigin" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abAlphaDestination" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abOriginstProvCd" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abDestinstProvCd" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="totalOversizeFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="sedCountryCode" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="sedCustomerReference" type="com:string35" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="preRateIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="zonePricingFlag" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="codFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invoiceDescription" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="refundIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="denialIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="fuelSurcharge" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="zonePricingOriginZip" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="pwrshpInvSource" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="PricingPGMCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="chronosShipmentId" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abInvTypeCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abInvSubTypeCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="edDiscountType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="autoBDType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="pudrpBDType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="dayBDType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="zipBDType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="softwareVersion" type="com:string4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="dowZipBDType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="pudrpZipBDType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="deviceName" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="meterNumber" type="com:numericString9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="rateSource" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="extraLabourHours" type="com:numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="exportOrigin" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="abCodeIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="altAddressIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="tdMasterTrackingNumber" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="autoMPSInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="revenueItemId" type="com:numericString16" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="bestRateCompCd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="ratedOrigPostalSrc" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="ratedDestPostalSrc" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="pupScanAppliedFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="ratedOrigPostal" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="rateService" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="minWeightO" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="linOfBusiness" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="storageRefrigDays" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="custodyDays" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="numOfHours" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="prevoiusInvoiceNbr" type="com:invoiceId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="customsEntryDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billToCashOnly" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billToDerivedSta" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="addressTotal" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billingCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="rerateCreditFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="disputeData" type="inv:DisputeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="resolveData" type="inv:ResolveDataType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billableMasInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="recipAddrClass" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="gblEntryNodeId" type="com:numericString12" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="ShipmentNbr" type="com:numericString15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="custEntryLoc" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="sortHub" type="com:string50" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="cefShipmentInd" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="packageUOM" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billToNumber" type="com:string9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="paymentLocCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="ShipNumber" type="com:string15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="groundDestinationZip" type="com:string11" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="multiWeightPPNumber" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="dfltMwtMinAppld" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for PLC10</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="mwtShpWgtMinInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for PLC10</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="mwtAvgPwgtMinInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for PLC10</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="mwtRatedInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for PLC10</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="minBillWgtAppld" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for PLC10</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="dimWgtScanSrcInd" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for PLC10</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="outbndPkgTrackingNbr" type="com:string20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="naftaGroundDTInd" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="deliveryLocId" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="preratedIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for ECS R53</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="TrackingSummaryType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:BaseTrackingSummaryType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="InvoiceId" type="com:invoiceId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invoiceOriginalAmt" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invoiceAmtDue" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="originData" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:extension base="inv:stationType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                                <xsd:element minOccurs="0" name="origStaCountry" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                <xsd:element minOccurs="0" name="origPostalCode" type="com:numericString13" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                                <xsd:element minOccurs="0" name="origCountryZone" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            </xsd:sequence>
+                                        </xsd:extension>
+                                    </xsd:complexContent>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="destinationData" type="inv:stationType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="iefSvcOptFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="edMinInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="mmaDisputeFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="meterAirBillFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="halFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="deliveryFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="sortItemNum" type="com:string7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="naftaShipInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="codCheckNumber" type="com:string7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="codCheckType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="codAbAmtRequired" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="codAbAmtCollected" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="codXrefAirbillNbr" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="codNbrChecks" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="podData" type="inv:podData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="groundData" type="inv:groundData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="statCode" type="com:string4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="podType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="mpsCompType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="mpsTrkNumber" type="com:string12" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="mpsTrkNumPrefix" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="podInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="optionGroups" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:element name="optionsGroupCnt" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        <xsd:element maxOccurs="unbounded" ref="inv:optionGroup" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="adjustableAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="disputeAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="invoiceLegalEntity" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for ENABLE APAC Part I.</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="employeeEligibilityFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Added for ENABLE APAC Part I.</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="groundData" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="grdPrefix" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdDepartmentNbr" type="com:string25" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdPoNumber" type="com:string25" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="meterBundleNumber" type="com:numericString7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdSortKey" type="com:numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdDocNbrPre" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdZpOrigin" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdCustInvNbr" type="com:string25" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdBumpUpWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdBumpInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdActualWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdMwtWeight" type="com:numericString7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdPreferredWeight" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdMWTNBR" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="grdDestPostalCode" type="com:string11" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="podData" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="podEdDiscType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="podAutoBdType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="podPudrpBdType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="poddayBdType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="podZipBdType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="podDowPupdrpBd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="podDowZipBd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="podPurdrpZipBd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="asbSuppInvNumber" type="com:numericString9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="podOutboundPkgTrk" type="com:string20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="stationType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="staCurrency" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="legalEnt" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="staConvert" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DisputeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="amount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="date" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="time" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="employeeNumber" type="com:numericString10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="departmentCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="locationCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="empLastName" type="com:string19" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="empInitials" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ResolveDataType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="empNumber" type="com:numericString10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="departmentCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="locationCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="empLastName" type="com:string19" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="empInitials" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="date" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="dateTime" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="reasonCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ReRateDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexContent xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:extension base="com:BaseReRateDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:element minOccurs="0" name="destPriceRegion" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="edThresholdAmount" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="serviceBase" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="servicePackaging" type="com:numericString2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="billedWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            <xsd:element minOccurs="0" name="numberOfPieces" type="com:numericString7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:element name="optionGroup" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:element minOccurs="0" name="optionsGroupKey" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                        <xsd:element minOccurs="0" name="optionsGroupValue" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:simpleType name="versionType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:minInclusive value="0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:attributeGroup name="versionAttributes" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:attribute fixed="1" name="majorVersion" type="inv:versionType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                <xsd:attribute fixed="0" name="minorVersion" type="inv:versionType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:attributeGroup>
+        </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:com="http://xmlns.fedex.com/rdt/Common" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xmlns.fedex.com/rdt/Common">
+            <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Title: Common Schema</xsd:documentation>
+                <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Initial Creation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType name="serviceBaseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="serviceBaseCode" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="serviceBaseIntInd" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="serviceBaseDomInd" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="serviceBaseShortDesc" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="serviceBaseLongDesc" type="com:string35" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="shippingMarketTypeCd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="packagingTypeCd" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="lineOfBusinessCd" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="effectiveFromDt" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="effectiveToDt" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="invoiceId" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="number" type="com:string15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="sequence" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="comHeader" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="GTID" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="sourceSystemID" type="com:wsSourceSystemCode" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="userId" type="com:employeeNumber" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="batchNumber" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="requestID" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="msgRequestTime" type="com:qualifiedDateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="msgResponseTime" type="com:qualifiedDateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="employeeType" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="invoiceSummaryType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="invoiceDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="originalAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="amountDue" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="currency" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="totalAirbillQuantity" type="com:numericString7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invoiceLevel" type="com:numericString2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="disputeAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="BaseTrackingType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="trackingId" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="totalTrackingIds" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="dimensionsType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="actual" type="com:actualType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="length" type="com:numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="width" type="com:numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="height" type="com:numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="volume" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="type" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Inch/CM</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="entryLocation" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="weightFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">DIM weight /100 weight</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="factor" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="divisor" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="actualType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="weightType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="weight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="BaseActivityType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Identify The fields needed for Activity Summary</xsd:documentation>
+                </xsd:annotation>
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="trackingId" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="type" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Debit, Credit, Payment</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="batch" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="appliedDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="receivedDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="amount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="checkNumber" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="employeeNumber" type="com:employeeNumber" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="reasonCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="CDNN" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="BaseChargeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="Code" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="originalAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="code" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="description" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="BaseInvoiceDetailType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="invoiceTypeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element minOccurs="0" name="type" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="description" type="com:string20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="status" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:simpleType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:restriction base="com:numericString2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:enumeration value="0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:enumeration value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:enumeration value="2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:enumeration value="5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:enumeration value="6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="invoiceBillToNumber" type="com:accountId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="nationalDiscountNumber" type="com:accountId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="governmentShipperFlag" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ediNumber" type="com:accountId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invoiceBillingCode" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="resultOptionsType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="invoices" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element minOccurs="0" name="activity" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="consolidatedCharges" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="detail" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="remarks" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="summary" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="caseInfo" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="tracking" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element minOccurs="0" name="activity" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="addresses" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="charges" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="details" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="dimensions" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="reRate" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="summary" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="reBill" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="caseInfo" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="podInfo" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="groundPickUpIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="phone" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="numericCountryCode" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">e.g "1" for US, "44" for UK</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="areaCode" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="phoneNumber" type="com:phoneString20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="searchWindow" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="contextId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="maxResults" type="xsd:nonNegativeInteger" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">To get the default maximum result set use a
+						value of 0</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="BaseTrackingDetailType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="serviceRendered" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element minOccurs="0" name="receivedAt" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="pofCause" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="pofCategory" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="deliverySignature" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="serviceCommitment" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="finalExceptionCode" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="finalDeliverToCode" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="pofClassification" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="noPODFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="firstAttempt" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                            <xsd:element name="date" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="time" type="com:numericString6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="code" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                            <xsd:element minOccurs="0" name="exception" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element minOccurs="0" name="serviceOptionFlag" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="rightDayLateMinutes" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="finalDeliveryDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                                <xsd:element minOccurs="0" name="finalDeliveryTime" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="groundTrackingId" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="paymentPayor" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="3" minOccurs="0" name="billingReference" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="podType" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="serviceBase" type="com:serviceBaseType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="paymentType" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="creditCard" type="com:creditCardType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="documentType" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="formId" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="departmentNumber" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="poNumber" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="bundleNumber" type="com:string7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="rmaNumber" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="numberOfPackages" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="weightType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="handlingUnit" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="BSOBIIND" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="recipientAcctNbr" type="com:string9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="shipperAcctNbr" type="com:string9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="regionalShipmentInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="customsNumber" type="com:string15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="customsValue" type="com:string20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="origin" type="com:locationType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="destination" type="com:locationType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ratedWeight" type="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="transCode" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="revenueThresholdAmt" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ratedWeightType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="pcvSchgFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="apdSchgFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="sdlSchgFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="odaSchgFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="adcSchgFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="odPaymentFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="recordStatus" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="masterAirBillNum" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="masterChildType" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="returnShipType" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="holdAtLocInd" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="BaseReRateDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="totalWeight" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ftbdRegionID" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ipdBoxCount" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="billingDocFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="paymentMethodCode" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="totalPCS" type="com:numericString7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="transBorderInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="declared" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <xsd:element minOccurs="0" name="carriageValue" type="com:string20" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Declared Value</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element minOccurs="0" name="declaredValueCurrencyCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="icpcFlag" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="icpcChildAcct" type="com:numericString9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="dimensionsTypex" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="length" type="com:numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="width" type="com:numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="height" type="com:numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="type" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Inch/CM</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="volume" type="com:string9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="remarksType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="date" type="com:qualifiedDateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="commentBytes" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="remark" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="employeeNumber" type="com:employeeNumber" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="employeeLastName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="employeePhoneNbr" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="number" type="com:string12" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="sequence" type="com:numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="locationType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="postalCode" type="com:string13" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="locationId" type="com:string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="stationCountry" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="trackingIdChargeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="Code" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="originalAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="adjustableAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ratedAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ratedCurrencyCode" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="caseExists" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="chrgAdjAmt" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="chrgDisputeAmt" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="BaseTrackingSummaryType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="trackingId" type="com:trackingId" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="shipDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="flatRateTypeCd" type="com:string2_2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="originalAmount" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="amountDue" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="company" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="invoiceDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="service" type="com:codeDescription" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="packagingCd" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="billToNumber" type="com:string9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="billToName" type="com:string35" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="rebillReason" type="com:string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="disputeInd" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="opco" type="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="rerateInd" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">InvoiceType</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="rebillInd" type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="ipdIndicator" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="tenderedDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="revenueDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="customsEntryDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="AdjustableAmt" type="com:amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="creditCardType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="type" type="com:string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="number" type="com:string17" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="authorization" type="com:string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="expirationDate" type="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AddressType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="customerName" type="com:string60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="address1" type="com:string125" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="address2" type="com:string125" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="companyName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="city" type="com:string60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="state" type="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="zip" type="com:string13" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="country" type="com:string4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="attention" type="com:string20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="phone" type="com:phone" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="phoneExt" type="com:numericString6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:simpleType name="opcoCode" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:enumeration value="FDC" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Cargo/KIAC</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FDCC" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Custom Critical</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FDEG" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Ground</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FDFR" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Freight</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FX" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Express</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FXK" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Kinkos</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FSCS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Supply Chain</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FDTN" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Trade Networks</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FDX" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Corporate</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FDSV" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Services</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="FCIS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">FedEx Customer Information Systems</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="accountId" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="amount" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:double" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="emailAddress" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="256" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:pattern value=".*@.*" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="employeeNumber" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="jmsSourceSystemCode" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="reasonCode" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="string120" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="120" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="wsSourceSystemCode" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:enumeration value="RDT" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">1Source RDT</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="qualifiedDateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:pattern value=".*(-|\+)..:.." xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:pattern value=".*Z" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="errorDescriptorCode" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:enumeration value="D" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Data Error</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="S" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">System Error</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="W" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Warning</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="F" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Fatal Error</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="O" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Overridable Error</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                    <xsd:enumeration value="I" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Informational Error</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:enumeration>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string2_2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:minLength value="2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string3" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string4" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string5" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string7" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string6" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string8" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string9" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string10" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string12" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="12" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string11" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="12" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string15" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string100" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="100" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string13" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="13" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string16" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="16" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string17" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="17" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string19" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="18" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string20" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string25" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="25" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string30" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="30" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string35" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="35" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string40" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string45" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="45" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string50" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="50" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string60" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string125" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="125" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:pattern value="\d+" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString3" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString4" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString5" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString6" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString7" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString8" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString9" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString10" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString13" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="13" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString20" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString18" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="18" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString11" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="11" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString15" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString16" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="numericString12" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:numericString" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="phoneString20" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:pattern value="(\-|\d)+" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string59" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string79" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:restriction base="com:nonEmptyString" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:maxLength value="80" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:com="http://xmlns.fedex.com/rdt/Common" xmlns:tns="http://xmlns.fedex.com/rdt/Header" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xmlns.fedex.com/rdt/Header">
+            <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Title: Common header Schema</xsd:documentation>
+            </xsd:annotation>
+            <xsd:import namespace="http://xmlns.fedex.com/rdt/Common" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+            <xsd:complexType name="RequestHeaderType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="request" type="com:comHeader" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ResponseHeaderType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element name="response" type="com:comHeader" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="status" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="errorStatus" type="tns:errorDescriptor" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <xsd:documentation xmlns:xsd="http://www.w3.org/2001/XMLSchema">Absence of this field indicates the operation was successful</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="MessageType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="targetService" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="targetServiceErrorCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="targetServiceErrorMessage" type="tns:errorDescriptor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="targetServiceFaultStack" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="errorDescriptor" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <xsd:element minOccurs="0" name="type" type="com:errorDescriptorCode" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element name="code" type="xsd:integer" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                    <xsd:element minOccurs="0" name="description" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="MBGStatusInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:part element="tns:MBGStatusInquiryRequest" name="MBGStatusInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+    </wsdl:message>
+    <wsdl:message name="MBGStatusInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:part element="tns:MBGStatusInquiryResponse" name="MBGStatusInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+    </wsdl:message>
+    <wsdl:message name="RefundInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:part element="tns:RefundInquiryRequest" name="RefundInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+    </wsdl:message>
+    <wsdl:message name="RefundInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:part element="tns:RefundInquiryResponse" name="RefundInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+    </wsdl:message>
+    <wsdl:message name="AdjustmentHistoryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:part element="tns:AdjustmentHistoryRequest" name="AdjustmentHistoryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+    </wsdl:message>
+    <wsdl:message name="AdjustmentHistoryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:part element="tns:AdjustmentHistoryResponse" name="AdjustmentHistoryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+    </wsdl:message>
+    <wsdl:message name="InvoiceInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:part element="tns:InvoiceInquiryRequest" name="InvoiceInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+    </wsdl:message>
+    <wsdl:message name="InvoiceInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:part element="tns:InvoiceInquiryResponse" name="InvoiceInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+    </wsdl:message>
+    <wsdl:portType name="InvoiceInquiryServicePort" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:operation name="MBGStatusInquiry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <wsdl:input message="tns:MBGStatusInquiryRequest" name="MBGStatusInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+            <wsdl:output message="tns:MBGStatusInquiryResponse" name="MBGStatusInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+        </wsdl:operation>
+        <wsdl:operation name="RefundInquiry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <wsdl:input message="tns:RefundInquiryRequest" name="RefundInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+            <wsdl:output message="tns:RefundInquiryResponse" name="RefundInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+        </wsdl:operation>
+        <wsdl:operation name="AdjustmentHistory" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <wsdl:input message="tns:AdjustmentHistoryRequest" name="AdjustmentHistoryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+            <wsdl:output message="tns:AdjustmentHistoryResponse" name="AdjustmentHistoryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+        </wsdl:operation>
+        <wsdl:operation name="InvoiceInquiry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <wsdl:input message="tns:InvoiceInquiryRequest" name="InvoiceInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+            <wsdl:output message="tns:InvoiceInquiryResponse" name="InvoiceInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InvoiceInquiryServicePortSoap11" type="tns:InvoiceInquiryServicePort" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        <wsdl:operation name="MBGStatusInquiry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input name="MBGStatusInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output name="MBGStatusInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RefundInquiry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input name="RefundInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output name="RefundInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AdjustmentHistory" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input name="AdjustmentHistoryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output name="AdjustmentHistoryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InvoiceInquiry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input name="InvoiceInquiryRequest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output name="InvoiceInquiryResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="InvoiceInquiryService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:port binding="tns:InvoiceInquiryServicePortSoap11" name="InvoiceInquiryServicePortSoap11" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <soap:address location="http://asrdtgwsa01.prod.fedex.com:57053/RDTInvoiceInquiry" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
